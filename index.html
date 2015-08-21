@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SVG USA Map</title>
+<meta name="description" content="SVG/VML Interactive USA map">
+<meta name="author" content="LGLab">
+
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="css/map.css" rel="stylesheet" type="text/css" />
+
+<script src="js/rightsjs.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/jquerycsv.js" type="text/javascript"></script>
+<script src="js/raphael.min.js" type="text/javascript"></script>
+<script src="js/scale.raphael.js" type="text/javascript"></script>
+<script src="js/paths.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+<script src="js/info.js" type="text/javascript"></script>
+<script type = "text/javascript"> function elementfn(el){
+	var bool = 0;
+	if  (document.getElementById(el).style.display == 'none'){
+		bool = 1;
+	}
+	document.getElementById('first').style.display = 'none';
+	document.getElementById('second').style.display = 'none';
+	document.getElementById('third').style.display = 'none';
+	document.getElementById('fourth').style.display = 'none';
+	if  (bool==1){
+		document.getElementById(el).style.display = 'inherit';
+	}
+
+	
+
+
+}   </script>
+
+</head>
+
+<body>
+	
+    <div id="container">
+        <table id = "above">    
+            <tr>
+                <th style="text-align: center"><span onclick="allon()">Click here for for all</span></th>
+                
+                <th>  <select id="dropdown" onchange="insert(this.value);colorize();selectcolr(this.value);" onfocus="this.selectedIndex = -1;"> <option value='none'></option></select>  </th>
+                <th></th>
+
+            </tr>
+        </table>
+        <div class="mapWrapper">
+                <div id="map"></div>
+                <div id="text"></div>
+
+        </div>
+        <table id="below">
+            
+        	<tr>
+	        	<th><span title='on' id='1' onclick="allpush('1')"> </span></th>
+	        	<th><span title='on' id='2' onclick="allpush('2')"></span></th> 
+	        	<th><span title='on' id='3' onclick="allpush('3')"></span></th> 
+	        	<th><span title='on' id='4' onclick="allpush('4')"></span></th>
+	        </tr>
+        	<tr>
+        		<td><span title='on' id="1a" onclick="buttonpush('1a')"><span id="1ao">&#9679</span></span></td> 
+        		<td><span title='on' id="2a" onclick="buttonpush('2a')"><span id="2ao">&#9679</span></span></td>
+        		<td><span title='on' id="3a" onclick="buttonpush('3a')"><span id="3ao">&#9679</span></span></td>
+        		<td><span title='on' id="4a" onclick="buttonpush('4a')"><span id="4ao">&#9679</span></span></td>
+
+        	 </tr>
+         	<tr>
+        		<td><span title='on' id="1b" onclick="buttonpush('1b')"><span id="1bo">&#9679</span></span></td> 
+        		<td><span title='on' id="2b" onclick="buttonpush('2b')"><span id="2bo">&#9679</span></span></td>
+        		<td><span title='on' id="3b" onclick="buttonpush('3b')"><span id="3bo">&#9679</span></span></td>
+        		<td><span title='on' id="4b" onclick="buttonpush('4b')"><span id="4bo">&#9679</span></span></td>
+
+        	 </tr>
+          	<tr>
+        		<td><span title='on' id="1c" onclick="buttonpush('1c')"><span id="1co">&#9679</span></span></td> 
+        		<td><span title='on' id="2c" onclick="buttonpush('2c')"><span id="2co">&#9679</span></span></td>
+        		<td><span title='on' id="3c" onclick="buttonpush('3c')"><span id="3co">&#9679</span></span></td>
+        		<td><span title='on' id="4c" onclick="buttonpush('4c')"><span id="4co">&#9679</span></span></td>
+
+        	 </tr>
+           	<tr>
+        		<td><span title='on' id="1d" onclick="buttonpush('1d')"><span id="1do">&#9679</span></span></td> 
+        		<td><span title='on' id="2d" onclick="buttonpush('2d')"><span id="2do">&#9679</span></span></td>
+        		<td><span title='on' id="3d" onclick="buttonpush('3d')"><span id="3do">&#9679</span></span></td>
+        		<td><span title='on' id="4d" onclick="buttonpush('4d')"><span id="4do">&#9679</span></span></td>
+
+        	 </tr>
+        	<tr>
+        		<td><span title='on' id="1e" onclick="buttonpush('1e')"><span id="1eo">&#9679</span></span></td> 
+        		<td><span title='on' id="2e" onclick="buttonpush('2e')"><span id="2eo">&#9679</span></span></td>
+        		<td><span title='on' id="3e" onclick="buttonpush('3e')"><span id="3eo">&#9679</span></span></td>
+        		<td><span title='on' id="4e" onclick="buttonpush('4e')"><span id="4eo">&#9679</span></span></td>
+
+        	 </tr>
+
+        	<tr>
+        		<td></td> 
+        		<td><span title='on' id="2f" onclick="buttonpush('2f')"><span id="2fo">&#9679</span></span></td>
+        		<td></td>
+        		<td><span title='on' id="4f" onclick="buttonpush('4f')"><span id="4fo">&#9679</span></span></td>
+
+        	 </tr>
+
+
+
+        </table>
+        
+    </div>
+
+
+</body>
+</html>

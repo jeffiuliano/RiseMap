@@ -1,0 +1,22 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config files
+desktop.ini
+.DS_Store
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# Whatever these are 
+*.xcf
+
+# Python compiled files
+*.pyc

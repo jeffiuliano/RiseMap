@@ -1,4 +1,22 @@
 <!doctype html>
+
+<!--
+Introduction to the map.  The base code for the US map was taken from :
+
+    http://freehtml5maps.com/
+
+    License terms:
+
+    -You may freely use/include the map for personal and commercial projects. We would appreciate that you share our site on any social sharing sites such as twitter, facebook etc...or link back to us from your site in return.
+
+    -You may redistribute the work for free under the condition that you link to our site. You may not under any condition redistribute the work commercially.
+
+I have altered the init.js file somewhat, but most things are unchanged.  The XML file is where you are supposed to put info for each state, but I found it too static/limiting, so I set it up so that I could alter it with javascript.  The majority of the code I wrote is in the info.js file.
+
+
+
+-->
+
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -20,6 +38,7 @@
 <script src="js/init.js" type="text/javascript"></script>
 <script src="js/info.js" type="text/javascript"></script>
 <script type = "text/javascript"> function elementfn(el){
+    //this function shows/hides text under each category on the right side of the map when you click a category.
 	var bool = 0;
 	if  (document.getElementById(el).style.display == 'none'){
 		bool = 1;
